@@ -100,7 +100,7 @@ a:hover {
 }
 
 .navbar{
-    background-color: #629B75;
+    background-color: #131A18;
     width: 102%;
     height: 3.5rem;
     margin-top: -1rem;
@@ -108,12 +108,11 @@ a:hover {
 }
 
 .navigationButtons{
-    background-color: #629B75;
-    height: 3.2rem;
+    background-color: #131A18;
+    height: 2.2rem;
     border-radius: 5px;
     color: #FBFBFB;
-    border-left: 2px solid #131A18;
-    border-right: 2px solid #131A18;border-bottom: none;
+    border: 2px solid #386242;
     margin-top: -2rem;
 }
 .navigationButtons:hover{
@@ -132,7 +131,7 @@ a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #629B75;
+    background-color: #131A18;
     min-width: 160px;
     border-radius: 5px;
     border: 2px solid #131A18;
