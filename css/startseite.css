@@ -1,0 +1,26 @@
+.karte{
+    width: 993px;
+    height: 669px;
+}
+
+.datum{
+    display: inline-block;
+}
+
+.svgText{
+    font-family: 'Muli', sans-serif;
+    font-size: 15px;
+}
+
+.textUnterKarte{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.svgPolygon:hover{
+    cursor: pointer;
+}
+
+.edinburghWebcamText{
+    display: inline-block;
+}

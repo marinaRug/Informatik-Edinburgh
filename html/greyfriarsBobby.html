@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../css/marinaRug.css" rel="stylesheet">
+    <link href="../css/unterseiten.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../javascript/marinaRug.js"></script>
+    <title>Greyfriars Bobby</title>
+</head>
+<body>
+<button class="buttons">
+    <a href="startseite.html">Startseite</a>
+</button>
+
+<div class="unterSeiteUeberschrift">
+    <h1 class="ueberschriftTabs">Greyfriars Bobby</h1>
+</div>
+
+<div class="slideshow-container">
+
+    <div class="fade">
+        <img id="erstesBild" src="../images/greyfriarsBobby/bild1.jpg" class="erstesBild slideshowBilder">
+    </div>
+
+    <div class="bilder fade">
+        <img src="../images/greyfriarsBobby/bild1.jpg" class="erstesBild slideshowBilder">
+    </div>
+
+    <div class="bilder fade">
+        <img src="../images/greyfriarsBobby/bild2.jpg" class="nichtErstesBild slideshowBilder">
+    </div>
+
+    <div class="bilder fade">
+        <img src="../images/greyfriarsBobby/bild3.jpg" class="nichtErstesBild slideshowBilder">
+    </div>
+
+    <a class="vorheriges material-icons" onclick="naechstesBild(-1)">navigate_before</a>
+    <a class="naechstes material-icons" onclick="naechstesBild(1)">navigate_next</a>
+</div>
+<br>
+
+<div class="punkte">
+    <span class="punkt" onclick="aktuellesBild(1)"></span>
+    <span class="punkt" onclick="aktuellesBild(2)"></span>
+    <span class="punkt" onclick="aktuellesBild(3)"></span>
+</div>
+
+<div class="tableContainer">
+    <h3>Überblick</h3>
+    <table class="unterSeiteTable">
+        <tr>
+            <td class="ersteSpalte">Die Legende</td>
+            <td class="zweiteSpalte">Im Jahre 1850 kam ein Mann, John Gray, mit seiner Frau nach Edinburgh, doch konnte
+                in seinem
+                Beruf keine Arbeit finden. So nahm er eine Arbeit als nächtlicher Wachtmann an. Um in den kalten
+                Wintermonaten nicht so allein zu sein, holte er sich einen Partner, den Skye Terrier Bobby. Jahrelang
+                arbeiteten sie Seite an Seite, bis zum 15 Februar 1858, als John starb. Er wurde in Greyfriars Kirkyard
+                in Edinburgh begraben. Der kleine Hund, Bobby, war so erschüttert von dem Tod seinen Herrchens, dass er
+                nicht von dessen Grab weichen wollte. Der Gärtner von Greyfriar versuchte alles, den Hund vom Friedhof
+                fernzuhalten, doch am Ende musste er aufgeben. So geschah es, dass er Bobby einen Unterschlupf baute.
+                Schnell wurde Bobby berühmt, sodass regelmäßig Menschen den Friedhof besuchten, um Bobby zu sehen. Sie
+                kamen und warteten auf die 1 Uhr Kanone, denn dies war die einzige Uhrzeit, an der Bobby das Grab
+                verlassen würde, um sein Mittagessen in einem in der Nähe gelegenen Diner zu holen. Im Jahre 1872 starb
+                Bobby. Die Baronin Angelia Georgina Burdett-Coutts war so gerührt von der Geschichte, dass sie eine
+                Statue von Bobby errichten ließ. Heutztage ist es brauch die Nase von Bobbys Statue zu berühren, denn
+                das bringt Glück...
+            </td>
+        </tr>
+        <tr>
+            <td>Mehr Information unter</td>
+            <td><a href="https://www.historic-uk.com/HistoryUK/HistoryofScotland/Greyfriars-Bobby/">www.historic-uk.com</a></td>
+        </tr>
+    </table>
+</div>
+</body>
+
+<footer class="impressum">
+
+    <a href="impressum.html" class="impressum">Impressum</a>
+
+</footer>
+
+</body>
+</html>

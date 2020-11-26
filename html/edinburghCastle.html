@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../css/marinaRug.css" rel="stylesheet">
+    <link href="../css/unterseiten.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../javascript/marinaRug.js"></script>
+    <title>Edinburgh Castle</title>
+</head>
+<body>
+<button class="buttons">
+    <a href="startseite.html">Startseite</a>
+</button>
+
+<div class="unterSeiteUeberschrift">
+    <h1 class="ueberschriftTabs">Edinburgh Castle</h1>
+</div>
+<div class="slideshow-container">
+
+    <div class="fade">
+        <img id="erstesBild" src="../images/edinburghCastle/bild1.jpg" class="erstesBild slideshowBilder">
+    </div>
+
+    <div class="bilder fade">
+        <img src="../images/edinburghCastle/bild1.jpg" class="erstesBild slideshowBilder">
+    </div>
+
+    <div class="bilder fade">
+        <img src="../images/edinburghCastle/bild2.jpg" class="nichtErstesBild slideshowBilder">
+    </div>
+
+    <div class="bilder fade">
+        <img src="../images/edinburghCastle/bild3.jpg" class="nichtErstesBild slideshowBilder">
+    </div>
+
+    <a class="vorheriges material-icons" onclick="naechstesBild(-1)">navigate_before</a>
+    <a class="naechstes material-icons" onclick="naechstesBild(1)">navigate_next</a>
+</div>
+
+<br>
+
+<div class="punkte">
+    <span class="punkt" onclick="aktuellesBild(1)"></span>
+    <span class="punkt" onclick="aktuellesBild(2)"></span>
+    <span class="punkt" onclick="aktuellesBild(3)"></span>
+</div>
+
+<div class="tableContainer">
+    <h3>Überblick</h3>
+    <table class="unterSeiteTable">
+        <tr>
+            <td class="ersteSpalte">Geschichte</td>
+            <td class="zweiteSpalte">Es ist nicht eindeutig geklärt, wann das Edinburgh Castle gebaut wurde.
+                Allerdings ist der Platz einer der ältesten "befestigten" Orte der Welt.
+                Man geht davon aus, das die Burg bereits im 7. Jahrhundert erbaut wurde.
+                Aufgrund seiner strategisch günstigen Lage wurde oft versucht das Schloss einzunehmen, so wurde es
+                viele Male belagert. Während den Unabhängigkeitskriegen wurde auch einige Male der Besitzer gewechselt.
+                Im Jahre 1314 gelang es zurück in die Hände der Schotten.
+            </td>
+        </tr>
+        <tr>
+            <td>Mehr Information unter</td>
+            <td><a href="https://www.visitbritain.com/de/de/palace-holyroodhouse">www.visitbritain.com</a></td>
+        </tr>
+    </table>
+</div>
+</body>
+
+<footer class="impressum">
+
+    <a href="impressum.html" class="impressum">Impressum</a>
+
+</footer>
+</html>

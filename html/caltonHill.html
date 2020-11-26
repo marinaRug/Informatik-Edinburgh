@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../css/marinaRug.css" rel="stylesheet">
+    <link href="../css/unterseiten.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../javascript/marinaRug.js"></script>
+    <title>Edinburgh Castle</title>
+</head>
+<body>
+<button class="buttons">
+    <a href="startseite.html">Startseite</a>
+</button>
+
+<div class="unterSeiteUeberschrift">
+    <h1 class="ueberschriftTabs">Calton Hill</h1>
+</div>
+
+<div class="slideshow-container">
+
+    <div class="fade">
+        <img id="erstesBild" src="../images/caltonHill/bild1.jpg" class="erstesBild slideshowBilder">
+    </div>
+
+    <div class="bilder fade">
+        <img src="../images/caltonHill/bild1.jpg" class="erstesBild slideshowBilder">
+    </div>
+
+    <div class="bilder fade">
+        <img src="../images/caltonHill/bild2.jpg" class="nichtErstesBild slideshowBilder">
+    </div>
+
+    <div class="bilder fade">
+        <img src="../images/caltonHill/bild3.jpg" class="nichtErstesBild slideshowBilder">
+    </div>
+
+    <a class="vorheriges material-icons" onclick="naechstesBild(-1)">navigate_before</a>
+    <a class="naechstes material-icons" onclick="naechstesBild(1)">navigate_next</a>
+</div>
+
+<br>
+
+<div class="punkte">
+    <span class="punkt" onclick="aktuellesBild(1)"></span>
+    <span class="punkt" onclick="aktuellesBild(2)"></span>
+    <span class="punkt" onclick="aktuellesBild(3)"></span>
+</div>
+
+<div class="tableContainer">
+    <h3>Überblick</h3>
+    <table class="unterSeiteTable">
+        <tr>
+            <td class="ersteSpalte">Auf dem Berg</td>
+            <td class="zweiteSpalte"> Calton Hill ist berühmt für seine historischen Monumente. So steht hier neben
+                einem griechischen Tempel, ein Nelson Monument und auch ein Observatorium ist hier zu finden.
+                Nebem den Monumenten hat man von diesem Berg aus eine der schönsten Aussichen über die gesamte Stadt.
+            </td>
+        </tr>
+        <tr>
+            <td>Mehr Information unter</td>
+            <td><a href="https://ewh.org.uk/world-heritage-sites/calton-hill/">ewh.org.uk</a></td>
+        </tr>
+    </table>
+</div>
+</body>
+
+<footer class="impressum">
+
+    <a href="impressum.html" class="impressum">Impressum</a>
+
+</footer>
+</html>

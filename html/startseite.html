@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../css/marinaRug.css" rel="stylesheet">
+    <link href="../css/startseite.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../images/edinburghCastle/bild1.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=EB+Garamond&family=Piazzolla:wght@100&display=swap"
+          rel="stylesheet">
+    <script type="text/javascript" src="../javascript/marinaRug.js"></script>
+    <meta charset="UTF-8">
+    <meta name="author" content="Marina Rug">
+    <title>Edinburgh</title>
+</head>
+<body>
+<h1 class="ueberschrift">Edinburgh</h1>
+
+<div class="bilderContainer">
+
+    <svg width="833px" height="462px">
+
+        <image x="1"
+               y="1"
+               width="833px"
+               height="462px"
+               xlink:href="../images/karte.PNG">
+            <title>Edinburghkarte</title>
+        </image>
+        <polygon points="0,0 0,462 833,462 833,0" fill="none" stroke="#131A18" stroke-width="8px"></polygon>
+        <text class="svgText" x=85 y="248" fill="forestgreen" onclick="oeffneUnterseite(id)">Edinburgh Castle</text>
+        <circle class="svgPolygon"
+                cx="210" cy="235"
+                r="7"
+                style="fill:darkslategray"
+                onclick="oeffneUnterseite('edinburghCastle')"></circle>
+        <polygon class="svgPolygon"
+                 points="203.3,237 210,250 216.7,237"
+                 style="fill:darkslategray"
+                 onclick="oeffneUnterseite('edinburghCastle')"></polygon>
+
+        <text class="svgText" x="335" y="123" fill="forestgreen" onclick="oeffneUnterseite(id)">Calton Hill</text>
+        <circle class="svgPolygon"
+                cx="415" cy="110"
+                r="7"
+                style="fill:darkslategray"
+                onclick="oeffneUnterseite('caltonHill')"></circle>
+        <polygon class="svgPolygon"
+                 points="408.3,112 415,125 421.7,112"
+                 style="fill:darkslategray"
+                 onclick="oeffneUnterseite('caltonHill')"></polygon>
+
+        <text id="holyroodPalace" class="svgText" x="423" y="173" fill="forestgreen" onclick="oeffneUnterseite(id)">
+            Holyrood Palace
+        </text>
+        <circle class="svgPolygon"
+                cx="545" cy="160"
+                r="7"
+                style="fill:darkslategray"
+                onclick="oeffneUnterseite('holyroodPalace')"></circle>
+        <polygon class="svgPolygon"
+                 points="538.3,162 545,175 551.7,162"
+                 style="fill:darkslategray"
+                 onclick="oeffneUnterseite('holyroodPalace')"></polygon>
+        <text id="greyfriarsBobby" class="svgText" x="212" y="293" fill="forestgreen" onclick="oeffneUnterseite(id)">
+            GreyfriarsBobby
+        </text>
+
+        <circle class="svgPolygon"
+                cx="330" cy="280"
+                r="7"
+                style="fill:darkslategray"
+                onclick="oeffneUnterseite('greyfriarsBobby')"></circle>
+        <polygon class="svgPolygon"
+                 points="323.3,282 330,295 336.7,282"
+                 style="fill:darkslategray"
+                 onclick="oeffneUnterseite('greyfriarsBobby')"></polygon>
+    </svg>
+
+</div>
+
+<div class="textUnterKarte">
+    <p class="edinburghWebcamText">Edinburgh Webcam und Wetterkarte vom
+    </p>
+    <script>datumUndUhrzeitAnzeigen()</script>
+    <a href="https://www.windy.com/de/-Webcams/Vereinigtes-K%C3%B6nigreich/Schottland/Tollcross/Radisson-Blu-Edinburgh/webcams/1576525943?55.949,-16.392,5"
+       target="_blank">
+        Wetter und Webcam Edinburgh
+    </a>
+</div>
+
+</body>
+
+<footer class="impressum">
+
+    <a href="impressum.html" class="impressum">Impressum</a>
+
+</footer>
+</html>

@@ -1,0 +1,50 @@
+function oeffneUnterseite(fileName) {
+    window.location.href = "../html/" + fileName + ".html";
+}
+
+function datumUndUhrzeitAnzeigen() {
+    date = new Date();
+    jahr = date.getFullYear();
+    monat = date.getMonth() + 1;
+    tag = date.getDate();
+
+    stunden = date.getHours();
+    minuten = date.getMinutes();
+    sekunden = date.getSeconds();
+
+    document.write("<b class='datum'>" + tag + "." + monat + "." + jahr + " - " + stunden + ":" + minuten + ":" + sekunden + ":  " + "</b>");
+}
+
+var slideIndex = 1;
+zeigeBilder(slideIndex);
+
+function naechstesBild(n) {
+    zeigeBilder(slideIndex += n);
+}
+
+function aktuellesBild(n) {
+    zeigeBilder(slideIndex = n);
+}
+
+function zeigeBilder(n) {
+    let erstesBild = document.getElementById("erstesBild");
+    erstesBild.style.display = "none";
+
+    var i;
+    var bilder = document.getElementsByClassName("bilder");
+    var punkte = document.getElementsByClassName("punkt");
+    if (n > bilder.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = bilder.length
+    }
+    for (i = 0; i < bilder.length; i++) {
+        bilder[i].style.display = "none";
+    }
+    for (i = 0; i < punkte.length; i++) {
+        punkte[i].className = punkte[i].className.replace(" active", "");
+    }
+    bilder[slideIndex - 1].style.display = "block";
+    punkte[slideIndex - 1].className += " active";
+}

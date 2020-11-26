@@ -1,0 +1,59 @@
+body, html{
+    background-color: #386242;
+    color: #FBFBFB;
+    font-family: 'Muli', cursive;
+}
+h1{
+    font-family: 'Dancing Script', cursive;
+}
+.bilderContainer{
+    text-align: center;
+}
+.textstyle{
+    color: #FBFBFB;
+    font-family: 'Muli', cursive;
+}
+
+.buttons {
+    background-color: #386242;
+    border: 3px solid #131A18;
+    color: #FBFBFB;
+    margin: 1px;
+    font-weight: bolder;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 6px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    font-size: 20px;
+}
+
+.buttons:hover {
+    cursor: pointer;
+    background: #629B75;
+}
+
+a {
+    color: #629B75;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #FBFBFB;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #131A18;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+
+.ueberschrift{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 50px;
+}
