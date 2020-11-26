@@ -141,6 +141,7 @@ a:hover {
 
 /* Links inside the dropdown */
 .dropdown-content a {
+    font-family: Muli, cursive;
     color: #FBFBFB;
     padding: 12px 16px;
     text-decoration: none;
