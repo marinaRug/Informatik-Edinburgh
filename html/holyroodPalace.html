@@ -5,7 +5,8 @@
     <link href="../css/unterseiten.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Piazzolla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Piazzolla&display=swap"
+          rel="stylesheet">
     <meta charset="UTF-8">
     <script type="text/javascript" src="../javascript/marinaRug.js"></script>
     <title>Edinburgh Castle</title>
@@ -19,7 +20,7 @@
         </button>
 
         <div class="dropdown">
-            <button class="navigationButtons dropdown dropbtn">Dropdown</button>
+            <button class="navigationButtons dropdown dropbtn">Orte</button>
             <div class="dropdown-content">
                 <a href="edinburghCastle.html">Edinburgh Castle</a>
                 <a href="caltonHill.html">Calton Hill</a>
@@ -34,37 +35,42 @@
     </nav>
 </div>
 
-<div class="unterSeiteUeberschrift">
-    <h1 class="ueberschriftTabs">Holyrood Palace</h1>
-</div>
+<div class="darkBackground">
 
-<div class="slideshow-container">
+    <div class="unterSeiteUeberschrift">Holyrood Palace</div>
 
-    <div class="fade">
-        <img id="erstesBild" src="../images/holyrood/bild1.jpg" class="erstesBild slideshowBilder">
+    <div class="slideshow-container">
+
+        <div class="fade">
+            <img id="erstesBild" src="../images/holyrood/bild1.jpg" class="erstesBild slideshowBilder">
+        </div>
+
+        <div class="bilder fade">
+            <img src="../images/holyrood/bild1.jpg" class="erstesBild slideshowBilder">
+        </div>
+
+        <div class="bilder fade">
+            <img src="../images/holyrood/bild2.jpg" class="nichtErstesBild slideshowBilder">
+        </div>
+
+        <div class="bilder fade">
+            <img src="../images/holyrood/bild3.jpg" class="nichtErstesBild slideshowBilder">
+        </div>
+
+        <a class="vorheriges material-icons" onclick="naechstesBild(-1)">navigate_before</a>
+        <a class="naechstes material-icons" onclick="naechstesBild(1)">navigate_next</a>
     </div>
 
-    <div class="bilder fade">
-        <img src="../images/holyrood/bild1.jpg" class="erstesBild slideshowBilder">
-    </div>
 
-    <div class="bilder fade">
-        <img src="../images/holyrood/bild2.jpg" class="nichtErstesBild slideshowBilder">
-    </div>
 
-    <div class="bilder fade">
-        <img src="../images/holyrood/bild3.jpg" class="nichtErstesBild slideshowBilder">
-    </div>
-
-    <a class="vorheriges material-icons" onclick="naechstesBild(-1)">navigate_before</a>
-    <a class="naechstes material-icons" onclick="naechstesBild(1)">navigate_next</a>
-</div>
 <br>
 
 <div class="punkte">
     <span class="punkt" onclick="aktuellesBild(1)"></span>
     <span class="punkt" onclick="aktuellesBild(2)"></span>
     <span class="punkt" onclick="aktuellesBild(3)"></span>
+</div>
+
 </div>
 
 <div class="tableContainer">
