@@ -12,13 +12,23 @@
     font-size: 15px;
 }
 
-.textUnterKarte{
-    margin-top: 1rem;
-    text-align: center;
+.svgBuchstabe{
+    font-size: 10px;
+}
+.svgText:hover{
+    cursor: pointer;
+}
+.svgBuchstabe:hover{
+    cursor: pointer;
 }
 
 .svgPolygon:hover{
     cursor: pointer;
+}
+
+.textUnterKarte{
+    margin-top: 1rem;
+    text-align: center;
 }
 
 .edinburghWebcamText{
