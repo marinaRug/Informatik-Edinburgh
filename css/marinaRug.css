@@ -20,19 +20,20 @@ body, html{
 }
 
 a {
-    color: #105E31;
+    color: #FDF8F5;
     background-color: transparent;
     text-decoration: none;
 }
 
 a:visited {
-    color: #105E31;
+    color: #FDF8F5;
     background-color: transparent;
     text-decoration: none;
 }
 
 a:hover {
-    color: #105E31;
+    color: #FDF8F5;
+    cursor: pointer;
     background-color: transparent;
     text-decoration: underline;
 }
