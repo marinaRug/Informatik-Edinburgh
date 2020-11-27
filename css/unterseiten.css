@@ -114,3 +114,10 @@
 #impressumTable{
     padding-bottom: 2rem;
 }
+
+.impressumLink:visited{
+    color: #FDF8F5;
+}
+.impressumLink{
+    color: #FDF8F5;
+}
