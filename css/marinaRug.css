@@ -6,8 +6,8 @@ body, html{
 
 .darkBackground{
     background-color: #37433B;
-    width: 102%;
-    margin-left: -1rem;
+    width: 101%;
+    margin-left: -0.5rem;
 }
 
 .bilderContainer{
@@ -110,7 +110,7 @@ a:hover {
 .navbar{
     font-family: 'Piazzolla', serif;
     background-color: #FDF8F5;
-    width: 102%;
+    width: 101%;
     height: 3.5rem;
     margin-top: -1rem;
     margin-left: -1rem;
