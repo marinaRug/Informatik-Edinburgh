@@ -48,3 +48,61 @@ function zeigeBilder(n) {
     bilder[slideIndex - 1].style.display = "block";
     punkte[slideIndex - 1].className += " active";
 }
+
+function showOSMKarte(ort) {
+    var lon;
+    var lat;
+    var zoom;
+
+    if (ort === 'castle') {
+        lon = -3.19021;
+        lat = 55.94749;
+        zoom = 15
+    }
+    if (ort === 'holyrood') {
+        lon = -3.17224;
+        lat = 55.95284;
+        zoom = 15
+    }
+    if (ort === 'greyfriarsBobby') {
+        lon = -3.19259;
+        lat = 55.94710;
+        zoom = 15
+    }
+    if (ort === 'caltonHill') {
+        lon = -3.18293;
+        lat = 55.95516;
+        zoom = 15
+    }
+    if (ort === 'startseite') {
+        lon = -3.188267;
+        lat = 55.953251;
+        zoom = 9
+    }
+
+    var map = new ol.Map({
+        target: 'map',
+        layers: [
+            new ol.layer.Tile({
+                source: new ol.source.OSM()
+            })
+        ],
+        view: new ol.View({
+            center: ol.proj.fromLonLat([lon, lat]),
+            zoom: zoom
+        })
+    });
+
+    var markerFeature = new ol.Feature({
+        geometry: new ol.geom.Point(ol.proj.fromLonLat([lon, lat]))
+    });
+
+    var layer = new ol.layer.Vector({
+        source: new ol.source.Vector({
+            features: [markerFeature]
+        })
+    });
+    map.addLayer(layer);
+
+
+}

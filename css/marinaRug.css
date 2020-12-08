@@ -43,7 +43,6 @@ a:hover {
     text-align: center;
     font-size: 5rem;
     padding-bottom: 2rem;
-    padding-top: 4rem;
     color: #FDF8F5;
     text-shadow: 0 0 7px #9DAA9D;
 }
@@ -173,4 +172,10 @@ a:hover {
 .dropdown:hover .dropbtn {
     background-color: #105E31;
     color: #FDF8F5;
+}
+
+.map {
+    height: 10rem;
+    width: 100%;
+    padding-top: 2.5rem;
 }
