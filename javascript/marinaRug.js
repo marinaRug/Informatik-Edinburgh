@@ -55,8 +55,8 @@ function showOSMKarte(ort) {
     var zoom;
 
     if (ort === 'castle') {
-        lon = -3.19021;
-        lat = 55.94749;
+        lon = -3.200150;
+        lat = 55.94869;
         zoom = 15
     }
     if (ort === 'holyrood') {
