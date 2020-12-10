@@ -176,21 +176,3 @@ a:hover {
     width: 100%;
     padding-top: 2.5rem;
 }
-
-.clickableMap{
-    height: 35rem;
-    width: 100%;
-    padding-top: 2.5rem;
-}
-
-.backgroundOSMKarte{
-    width: 100%;
-    background-color: #37433B;
-    height: 42rem;
-}
-
-.coordinates{
-    padding: 0.5rem;
-    color: #F1F1ED;
-    margin-left: 1rem;
-}

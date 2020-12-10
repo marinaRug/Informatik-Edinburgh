@@ -1,7 +1,43 @@
-.label{
+.label {
     color: #FDF8F5 !important;
 }
 
-.form{
+.form {
     margin-left: 1rem;
+}
+
+.clickableMap {
+    height: 25rem;
+    width: 100%;
+    padding-top: 2.5rem;
+}
+
+.backgroundOSMKarte {
+    width: 100%;
+    background-color: #37433B;
+    height: auto;
+}
+
+.coordinates {
+    text-align: center;
+    padding: 0.5rem;
+    color: #F1F1ED;
+    margin-left: 1rem;
+}
+.formFuerBerechnung{
+    color: #37433B;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.berechnungItems{
+    margin: 0.8rem;
+}
+
+.berechnungButton{
+    border: 2px solid #105E31;
+    background-color: #FDF8F5;
+    border-radius: 5px;
 }
