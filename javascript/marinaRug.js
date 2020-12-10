@@ -105,7 +105,7 @@ function showOSMKarte(ort) {
     map.addLayer(layer);
 }
 
-function showConfigurableOSMKarte() {
+function showClickableOSMKarte() {
 
     window.onload = function () {
 
@@ -117,7 +117,7 @@ function showConfigurableOSMKarte() {
         zoom = 9
 
         var map = new ol.Map({
-            target: 'configurableMap',
+            target: 'clickableMap',
             layers: [
                 new ol.layer.Tile({
                     source: new ol.source.OSM()

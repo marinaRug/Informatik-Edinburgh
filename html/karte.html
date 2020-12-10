@@ -21,11 +21,37 @@
 </head>
 <body>
 
+<div class="navbar">
+    <nav>
+        <button class="homeButton" onclick="oeffneUnterseite('startseite')">
+            Startseite
+        </button>
+
+        <div class="dropdown">
+            <button class="navigationButtons dropdown dropbtn">Orte</button>
+            <div class="dropdown-content">
+                <a href="edinburghCastle.html">Edinburgh Castle</a>
+                <a href="caltonHill.html">Calton Hill</a>
+                <a href="holyroodPalace.html">Holyrood Palace</a>
+                <a href="greyfriarsBobby.html">Greyfriar Bobby</a>
+            </div>
+        </div>
+
+        <button class="navigationButtons" onclick="oeffneUnterseite('karte')">
+            Karte
+        </button>
+
+        <button class="navigationButtons" onclick="oeffneUnterseite('impressum')">
+            Impressum
+        </button>
+    </nav>
+</div>
+
 <div class="backgroundOSMKarte">
 
-    <div id="configurableMap" class="configurableMap"></div>
+    <div id="clickableMap" class="clickableMap"></div>
     <script type="text/javascript">
-        showConfigurableOSMKarte();
+        showClickableOSMKarte();
     </script>
 
     <div class="coordinates">
