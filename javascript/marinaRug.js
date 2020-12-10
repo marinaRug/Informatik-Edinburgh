@@ -103,6 +103,55 @@ function showOSMKarte(ort) {
         })
     });
     map.addLayer(layer);
+}
 
+function showConfigurableOSMKarte() {
 
+    window.onload = function () {
+
+        var latitude;
+        var longitude;
+        var zoom;
+        longitude = -3.188267;
+        latitude = 55.953251;
+        zoom = 9
+
+        var map = new ol.Map({
+            target: 'configurableMap',
+            layers: [
+                new ol.layer.Tile({
+                    source: new ol.source.OSM()
+                })
+            ],
+            view: new ol.View({
+                center: ol.proj.fromLonLat([longitude, latitude]),
+                zoom: zoom
+            })
+        });
+
+        var markerFeature = new ol.Feature({
+            geometry: new ol.geom.Point(ol.proj.fromLonLat([longitude, latitude]))
+        });
+
+        var layer = new ol.layer.Vector({
+            source: new ol.source.Vector({
+                features: [markerFeature]
+            })
+        });
+        map.addLayer(layer);
+        map.on('click', function(evt){
+            var coordinates = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326').toString();
+            var coordinatesArray = coordinates.split(",");
+            var longitudeToBeDisplayed = parseFloat(coordinatesArray[0]).toFixed(6);
+            var latitudeToBeDisplayed = parseFloat(coordinatesArray[1]).toFixed(6);
+
+            document
+                .getElementById('longitude')
+                .innerHTML = 'Longitude: ' + longitudeToBeDisplayed.toString();
+
+            document
+                .getElementById('latitude')
+                .innerHTML = 'Latitude: ' + latitudeToBeDisplayed.toString();
+        });
+    }
 }

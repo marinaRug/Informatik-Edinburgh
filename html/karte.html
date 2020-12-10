@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../css/marinaRug.css" rel="stylesheet">
+    <link href="../css/karte.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css"
+          type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Piazzolla&display=swap"
+          rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Marina Rug">
+    <meta name="description" content="Edinburgh">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <script type="text/javascript" src="../javascript/marinaRug.js"></script>
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+
+    <title>Karte</title>
+</head>
+<body>
+
+<div class="backgroundOSMKarte">
+
+    <div id="configurableMap" class="configurableMap"></div>
+    <script type="text/javascript">
+        showConfigurableOSMKarte();
+    </script>
+
+    <div class="coordinates">
+        <div id="longitude" class="longitude">Longitude: -3.188267</div>
+        <div id="latitude" class="latitude">Latitude: 55.953251</div>
+    </div>
+</div>
+</body>
+</html>
