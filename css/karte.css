@@ -46,3 +46,11 @@
     background-color: #105E31;
     color: #FDF8F5;
 }
+
+.ergebnis{
+    border: 2px solid #105E31;
+    border-radius: 2px;
+    padding: 1rem;
+    width: 15rem;
+    margin-left: 43%;
+}

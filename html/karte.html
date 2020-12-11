@@ -88,12 +88,14 @@
                 <input id="latZwei" type="number">
             </label>
         </div>
-        <div class="berechnungItems">
-            <input size="4" name="berechnen_button" class="berechnungButton" value="Entfernung berechnen"
-                   onclick="berechneStrecke()" type="button">
+        <div>
+            <div class="berechnungItems">
+                <input size="4" name="berechnen_button" class="berechnungButton" value="Entfernung berechnen"
+                       onclick="berechneStrecke()" type="button">
+            </div>
         </div>
     </form>
-    <div class="berechnungItems" id="strecke">Strecke:</div>
+    <div class="berechnungItems ergebnis" id="strecke">Strecke:</div>
 </div>
 <div class="darkBackground" style="text-align: center">
     <div>
@@ -104,7 +106,8 @@
     </div>
     <div>
         2. Klicken Sie auf einen Punkt in der Karte (Sie können diese auch verschieben), <br>
-        entscheiden Sie sich dann, ob dieser Punkt Punkt 1 oder 2 sein soll und wählen Sie dies dann mit einem Klick <br>
+        entscheiden Sie sich dann, ob dieser Punkt Punkt 1 oder 2 sein soll und wählen Sie dies dann mit einem Klick
+        <br>
         auf den jeweiligen Button aus. Longitude und Latitude des jeweiligen Punktes sollten dann in den Feldern <br>
         unter Punkt 1 und 2 erscheinen.br>
         Nun können Sie die Strecke berechnen. <br>
