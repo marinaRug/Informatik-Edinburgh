@@ -149,5 +149,5 @@ function berechneStrecke(){
     y2 = parseFloat(document.getElementById('latZwei').value);
     strecke = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
     strecke = strecke * 100
-    document.getElementById('strecke').innerHTML = 'Strecke: ' + parseFloat(strecke).toFixed(2);
+    document.getElementById('strecke').innerHTML = 'Strecke: ' + parseFloat(strecke).toFixed(2) + ' km';
 }
