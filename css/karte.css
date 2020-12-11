@@ -45,6 +45,7 @@
 .berechnungButton:hover{
     background-color: #105E31;
     color: #FDF8F5;
+    cursor: pointer;
 }
 
 .ergebnis{
