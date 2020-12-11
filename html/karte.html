@@ -55,8 +55,8 @@
     </script>
 
     <div class="coordinates">
-        <div id="longitude" class="longitude">Longitude: -3.188267</div>
-        <div id="latitude" class="latitude">Latitude: 55.953251</div>
+        <div id="longitude" class="longitude">-3.188267</div>
+        <div id="latitude" class="latitude">55.953251</div>
     </div>
 
 </div>
@@ -65,31 +65,30 @@
     <h3 class="ueberschirftBerechnung">Entfernung zwischen zwei Punkten:</h3>
     <form>
         <div class="berechnungItems">
-            <button class="berechnungButton">Punkt 1 auf Karte auswählen</button>
+            <input size="4" name="berechnen_button" class="berechnungButton" value="Punkt 1" onclick="punktAuswaehlen(1)" type="button">
         </div>
         <div>
             <label class="berechnungItems">Longitude Punkt1:
-                <input type="number">
+                <input id="longEins" type="number">
             </label>
             <label class="berechnungItems">Latitude Punkt1:
-                <input type="number">
+                <input id="latEins" type="number">
             </label>
         </div>
         <div class="berechnungItems">
-            <button class="berechnungButton">Punkt 2 auf Karte auswählen</button>
+            <input size="4" name="berechnen_button" class="berechnungButton" value="Punkt 2" onclick="punktAuswaehlen(2)" type="button">
         </div>
         <div>
             <label class="berechnungItems">Longitude Punkt2:
-                <input type="number">
+                <input id="longZwei" type="number">
             </label>
             <label class="berechnungItems">Latitude Punkt2:
-                <input type="number">
+                <input id="latZwei" type="number">
             </label>
         </div>
-        <div class="berechnungItems">
-            <button  class="berechnungButton">Strecke berechnen</button>
-        </div>
+        <input size="4" name="berechnen_button" class="berechnungButton" value="Entfernung berechnen" onclick="berechneStrecke()" type="button">
     </form>
+    <div id="strecke">Strecke: </div>
 </div>
 </body>
 </html>

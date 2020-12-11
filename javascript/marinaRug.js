@@ -15,40 +15,6 @@ function datumUndUhrzeitAnzeigen() {
     document.write("<b class='datum'>" + tag + "." + monat + "." + jahr + " - " + stunden + ":" + minuten + ":" + sekunden + ":  " + "</b>");
 }
 
-var slideIndex = 1;
-zeigeBilder(slideIndex);
-
-function naechstesBild(n) {
-    zeigeBilder(slideIndex += n);
-}
-
-function aktuellesBild(n) {
-    zeigeBilder(slideIndex = n);
-}
-
-function zeigeBilder(n) {
-    let erstesBild = document.getElementById("erstesBild");
-    erstesBild.style.display = "none";
-
-    var i;
-    var bilder = document.getElementsByClassName("bilder");
-    var punkte = document.getElementsByClassName("punkt");
-    if (n > bilder.length) {
-        slideIndex = 1
-    }
-    if (n < 1) {
-        slideIndex = bilder.length
-    }
-    for (i = 0; i < bilder.length; i++) {
-        bilder[i].style.display = "none";
-    }
-    for (i = 0; i < punkte.length; i++) {
-        punkte[i].className = punkte[i].className.replace(" active", "");
-    }
-    bilder[slideIndex - 1].style.display = "block";
-    punkte[slideIndex - 1].className += " active";
-}
-
 function showOSMKarte(ort) {
     var lon;
     var lat;
@@ -105,6 +71,7 @@ function showOSMKarte(ort) {
     map.addLayer(layer);
 }
 
+
 function showClickableOSMKarte() {
 
     window.onload = function () {
@@ -139,7 +106,7 @@ function showClickableOSMKarte() {
             })
         });
         map.addLayer(layer);
-        map.on('click', function(evt){
+        map.on('click', function (evt) {
             var coordinates = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326').toString();
             var coordinatesArray = coordinates.split(",");
             var longitudeToBeDisplayed = parseFloat(coordinatesArray[0]).toFixed(6);
@@ -147,11 +114,39 @@ function showClickableOSMKarte() {
 
             document
                 .getElementById('longitude')
-                .innerHTML = 'Longitude: ' + longitudeToBeDisplayed.toString();
+                .innerHTML = longitudeToBeDisplayed.toString();
 
             document
                 .getElementById('latitude')
-                .innerHTML = 'Latitude: ' + latitudeToBeDisplayed.toString();
+                .innerHTML = latitudeToBeDisplayed.toString();
+
         });
     }
+}
+
+function punktAuswaehlen(nummer) {
+
+    var longitude;
+    var latitude;
+
+    longitude = parseFloat(document.getElementById('longitude').innerHTML);
+    latitude = parseFloat(document.getElementById('latitude').innerHTML);
+
+    if (nummer === 1) {
+        document.getElementById('longEins').value = longitude;
+        document.getElementById('latEins').value = latitude;
+    }
+    if (nummer === 2) {
+        document.getElementById('longZwei').value = longitude;
+        document.getElementById('latZwei').value = latitude;
+    }
+}
+
+function berechneStrecke(){
+    x1 = parseFloat(document.getElementById('longEins').value);
+    x2 = parseFloat(document.getElementById('latEins').value);
+    y1 = parseFloat(document.getElementById('longZwei').value);
+    y2 = parseFloat(document.getElementById('latZwei').value);
+    strecke = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+    document.getElementById('strecke').innerHTML = 'Strecke: ' + strecke;
 }
