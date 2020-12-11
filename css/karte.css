@@ -41,3 +41,8 @@
     background-color: #FDF8F5;
     border-radius: 5px;
 }
+
+.berechnungButton:hover{
+    background-color: #105E31;
+    color: #FDF8F5;
+}

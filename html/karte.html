@@ -65,7 +65,8 @@
     <h3 class="ueberschirftBerechnung">Entfernung zwischen zwei Punkten:</h3>
     <form>
         <div class="berechnungItems">
-            <input size="4" name="berechnen_button" class="berechnungButton" value="Punkt 1" onclick="punktAuswaehlen(1)" type="button">
+            <input size="4" name="berechnen_button" class="berechnungButton" value="Punkt 1"
+                   onclick="punktAuswaehlen(1)" type="button">
         </div>
         <div>
             <label class="berechnungItems">Longitude Punkt1:
@@ -76,7 +77,8 @@
             </label>
         </div>
         <div class="berechnungItems">
-            <input size="4" name="berechnen_button" class="berechnungButton" value="Punkt 2" onclick="punktAuswaehlen(2)" type="button">
+            <input size="4" name="berechnen_button" class="berechnungButton" value="Punkt 2"
+                   onclick="punktAuswaehlen(2)" type="button">
         </div>
         <div>
             <label class="berechnungItems">Longitude Punkt2:
@@ -86,9 +88,29 @@
                 <input id="latZwei" type="number">
             </label>
         </div>
-        <input size="4" name="berechnen_button" class="berechnungButton" value="Entfernung berechnen" onclick="berechneStrecke()" type="button">
+        <div class="berechnungItems">
+            <input size="4" name="berechnen_button" class="berechnungButton" value="Entfernung berechnen"
+                   onclick="berechneStrecke()" type="button">
+        </div>
     </form>
-    <div id="strecke">Strecke: </div>
+    <div class="berechnungItems" id="strecke">Strecke:</div>
+</div>
+<div class="darkBackground" style="text-align: center">
+    <div>
+        Berechnen Sie hier die Strecke zwischen zwei Punkten. Sie haben hierfür 2 Optionen:
+    </div>
+    <div>
+        1. Sie können die Punkte direkt in die Felder eingeben
+    </div>
+    <div>
+        2. Klicken Sie auf einen Punkt in der Karte (Sie können diese auch verschieben), <br>
+        entscheiden Sie sich dann, ob dieser Punkt Punkt 1 oder 2 sein soll und wählen Sie dies dann mit einem Klick <br>
+        auf den jeweiligen Button aus. Longitude und Latitude des jeweiligen Punktes sollten dann in den Feldern <br>
+        unter Punkt 1 und 2 erscheinen.br>
+        Nun können Sie die Strecke berechnen. <br>
+        Beachten Sie, dass bei der eingabe von Longitude und Latitude ausgegangen wird, <br>
+        daher wird das Ergebniss in Kilometern angegeben.
+    </div>
 </div>
 </body>
 </html>

@@ -144,9 +144,10 @@ function punktAuswaehlen(nummer) {
 
 function berechneStrecke(){
     x1 = parseFloat(document.getElementById('longEins').value);
-    x2 = parseFloat(document.getElementById('latEins').value);
-    y1 = parseFloat(document.getElementById('longZwei').value);
+    y1 = parseFloat(document.getElementById('latEins').value);
+    x2 = parseFloat(document.getElementById('longZwei').value);
     y2 = parseFloat(document.getElementById('latZwei').value);
     strecke = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-    document.getElementById('strecke').innerHTML = 'Strecke: ' + strecke;
+    strecke = strecke * 100
+    document.getElementById('strecke').innerHTML = 'Strecke: ' + parseFloat(strecke).toFixed(2);
 }
