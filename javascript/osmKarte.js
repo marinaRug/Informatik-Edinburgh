@@ -1,103 +1,79 @@
 const ERDRADIUS = 6378.88;
 const RAD = 0.01745329251994;
 const PI2 = 1.5707963267949; //Pi/2
+const EdinburghLong = -3.188267;
+const EdinburghLat = 55.953251;
 
-function showOSMKarte(ort) {
-    var lon;
-    var lat;
-    var zoom;
+function initializeMapVariables(ort) {
 
     if (ort === 'castle') {
-        lon = -3.200150;
-        lat = 55.94869;
-        zoom = 15
+        return {zoom: 15, coordinate: {longitude: -3.200150, latitude: 55.94869}};
     }
     if (ort === 'holyrood') {
-        lon = -3.17224;
-        lat = 55.95284;
-        zoom = 15
+        return {zoom: 15, coordinate: {longitude: -3.17224, latitude: 55.95284}};
     }
     if (ort === 'greyfriarsBobby') {
-        lon = -3.19259;
-        lat = 55.94710;
-        zoom = 15
+        return {zoom: 15, coordinate: {longitude: -3.19259, latitude: 55.94710}};
     }
     if (ort === 'caltonHill') {
-        lon = -3.18293;
-        lat = 55.95516;
-        zoom = 15
+        return {zoom: 15, coordinate: {longitude: -3.18293, latitude: 55.95516}};
     }
-    if (ort === 'startseite') {
-        lon = -3.188267;
-        lat = 55.953251;
-        zoom = 9
-    }
+    return {zoom: 9, coordinate: {longitude: EdinburghLong, latitude: EdinburghLat}};
+}
 
-    var map = new ol.Map({
-        target: 'map',
+function createMap(mapVariables, target) {
+    let longitude = mapVariables['coordinate']['longitude'];
+    let latitude = mapVariables['coordinate']['latitude'];
+    let zoom = mapVariables['zoom'];
+
+    let map = new ol.Map({
+        target: target,
         layers: [
             new ol.layer.Tile({
                 source: new ol.source.OSM()
             })
         ],
         view: new ol.View({
-            center: ol.proj.fromLonLat([lon, lat]),
+            center: ol.proj.fromLonLat([longitude, latitude]),
             zoom: zoom
         })
     });
 
-    var markerFeature = new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.fromLonLat([lon, lat]))
+    let markerFeature = new ol.Feature({
+        geometry: new ol.geom.Point(ol.proj.fromLonLat([longitude, latitude]))
     });
 
-    var layer = new ol.layer.Vector({
+    let layer = new ol.layer.Vector({
         source: new ol.source.Vector({
             features: [markerFeature]
         })
     });
     map.addLayer(layer);
+    return map;
+}
+
+function showOSMKarte(place) {
+    let mapVariables = initializeMapVariables(place);
+
+    createMap(mapVariables, 'map');
 }
 
 
 function showClickableOSMKarte() {
 
-    window.onload = function () {
+    window.onload = () => {
 
-        var latitude;
-        var longitude;
-        var zoom;
-        longitude = -3.188267;
-        latitude = 55.953251;
-        zoom = 9
+        let mapVariables = {
+            zoom: 9,
+            coordinate: {longitude: EdinburghLong, latitude: EdinburghLat}
+        };
 
-        var map = new ol.Map({
-            target: 'clickableMap',
-            layers: [
-                new ol.layer.Tile({
-                    source: new ol.source.OSM()
-                })
-            ],
-            view: new ol.View({
-                center: ol.proj.fromLonLat([longitude, latitude]),
-                zoom: zoom
-            })
-        });
-
-        var markerFeature = new ol.Feature({
-            geometry: new ol.geom.Point(ol.proj.fromLonLat([longitude, latitude]))
-        });
-
-        var layer = new ol.layer.Vector({
-            source: new ol.source.Vector({
-                features: [markerFeature]
-            })
-        });
-        map.addLayer(layer);
-        map.on('click', function (evt) {
-            var coordinates = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326').toString();
-            var coordinatesArray = coordinates.split(",");
-            var longitudeToBeDisplayed = parseFloat(coordinatesArray[0]).toFixed(6);
-            var latitudeToBeDisplayed = parseFloat(coordinatesArray[1]).toFixed(6);
+        let map = createMap(mapVariables, 'clickableMap');
+        map.on('click', evt => {
+            let coordinates = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326').toString();
+            let coordinatesArray = coordinates.split(",");
+            let longitudeToBeDisplayed = parseFloat(coordinatesArray[0]).toFixed(6);
+            let latitudeToBeDisplayed = parseFloat(coordinatesArray[1]).toFixed(6);
 
             document
                 .getElementById('longitude')
@@ -113,8 +89,8 @@ function showClickableOSMKarte() {
 
 function punktAuswaehlen(nummer) {
 
-    var longitude;
-    var latitude;
+    let longitude;
+    let latitude;
 
     longitude = parseFloat(document.getElementById('longitude').innerHTML);
     latitude = parseFloat(document.getElementById('latitude').innerHTML);
@@ -132,19 +108,19 @@ function punktAuswaehlen(nummer) {
 function berechneStrecke() {
     //Berechnet die Strecke zwischen zwei Koordinaten (Longitude/Latitude)
     //Dabei wird die Erde als Kugel angenommen, d.h. Bei großen Entfernungen wird das Ergebnis ungenau
-    lon1 = parseFloat(document.getElementById('longEins').value);
-    lat1 = parseFloat(document.getElementById('latEins').value);
-    lon2 = parseFloat(document.getElementById('longZwei').value);
-    lat2 = parseFloat(document.getElementById('latZwei').value);
+    let lon1 = parseFloat(document.getElementById('longEins').value);
+    let lat1 = parseFloat(document.getElementById('latEins').value);
+    let lon2 = parseFloat(document.getElementById('longZwei').value);
+    let lat2 = parseFloat(document.getElementById('latZwei').value);
 
     //Berechnung der Longitude und Latitude in Radiant
-    LonARad = lon1 * RAD
-    LatARad = lat1 * RAD
-    LonBRad = lon2 * RAD
-    LatBRad = lat2 * RAD
+    let LonARad = lon1 * RAD
+    let LatARad = lat1 * RAD
+    let LonBRad = lon2 * RAD
+    let LatBRad = lat2 * RAD
 
-    strecke = Math.sin(LatARad) * Math.sin(LatBRad) + Math.cos(Math.abs(LonARad - LonBRad)) * Math.cos(LatARad) * Math.cos(LatBRad)
+    let strecke = Math.sin(LatARad) * Math.sin(LatBRad) + Math.cos(Math.abs(LonARad - LonBRad)) * Math.cos(LatARad) * Math.cos(LatBRad)
     strecke = (Math.atan(-strecke / Math.sqrt(-strecke * strecke + 1)) + PI2) * ERDRADIUS;
 
-    document.getElementById('strecke').innerHTML = 'Strecke: ' + parseFloat(strecke).toFixed(2) + ' km';
+    document.getElementById('strecke').innerHTML = 'Strecke: ' + strecke.toFixed(2) + ' km';
 }

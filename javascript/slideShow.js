@@ -1,4 +1,4 @@
-var slideIndex = 1;
+let slideIndex = 1;
 zeigeBilder(slideIndex);
 
 function naechstesBild(n) {
@@ -13,9 +13,9 @@ function zeigeBilder(n) {
     let erstesBild = document.getElementById("erstesBild");
     erstesBild.style.display = "none";
 
-    var i;
-    var bilder = document.getElementsByClassName("bilder");
-    var punkte = document.getElementsByClassName("punkt");
+    let i;
+    let bilder = document.getElementsByClassName("bilder");
+    let punkte = document.getElementsByClassName("punkt");
     if (n > bilder.length) {
         slideIndex = 1
     }
