@@ -11,6 +11,19 @@ function datumUndUhrzeitAnzeigen() {
     stunden = date.getHours();
     minuten = date.getMinutes();
     sekunden = date.getSeconds();
+    if (minuten < 10) {
+        minuten = "0" + minuten;
+    }
+    if (sekunden < 10) {
+        sekunden = "0" + sekunden;
+    }
 
-    document.write("<b class='datum'>" + tag + "." + monat + "." + jahr + " - " + stunden + ":" + minuten + ":" + sekunden + ":  " + "</b>");
+    let datumsanzeige = document.getElementById('datum');
+    datumsanzeige.innerHTML = tag + "."
+        + monat + "."
+        + jahr + " - "
+        + stunden + ":"
+        + minuten + ":"
+        + sekunden;
+    window.setTimeout("datumUndUhrzeitAnzeigen();", 1000);
 }
