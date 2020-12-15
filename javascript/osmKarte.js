@@ -111,7 +111,7 @@ function berechneStrecke() {
     let lon1 = parseFloat(document.getElementById('longEins').value);
     let lat1 = parseFloat(document.getElementById('latEins').value);
     let lon2 = parseFloat(document.getElementById('longZwei').value);
-    let lat2 = parseFloat(document.getElementById('latZwei').value);
+    let lat2 = parseFloat(document.getElementById('latZwei').value);u
 
     //Berechnung der Longitude und Latitude in Radiant
     let LonARad = lon1 * RAD

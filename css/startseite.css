@@ -22,6 +22,10 @@
     cursor: pointer;
 }
 
+.svgPolygon{
+    fill: #105E31;
+}
+
 .svgPolygon:hover{
     cursor: pointer;
 }

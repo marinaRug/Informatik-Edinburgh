@@ -1,15 +1,15 @@
 let slideIndex = 1;
-zeigeBilder(slideIndex);
+zeigeBild(slideIndex);
 
 function naechstesBild(n) {
-    zeigeBilder(slideIndex += n);
+    zeigeBild(slideIndex += n);
 }
 
 function aktuellesBild(n) {
-    zeigeBilder(slideIndex = n);
+    zeigeBild(slideIndex = n);
 }
 
-function zeigeBilder(n) {
+function zeigeBild(n) {
     let erstesBild = document.getElementById("erstesBild");
     erstesBild.style.display = "none";
 
