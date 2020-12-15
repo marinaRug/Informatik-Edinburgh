@@ -9,7 +9,8 @@
           rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css"
           type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Piazzolla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Piazzolla&display=swap"
+          rel="stylesheet">
 
     <meta charset="UTF-8">
     <meta name="author" content="Marina Rug">
@@ -59,35 +60,35 @@
 
     <div class="unterSeiteUeberschrift">Edinburgh - Castle</div>
 
-<div class="slideshow-container">
+    <div class="slideshow-container">
 
-    <div class="fade">
-        <img id="erstesBild" src="../images/edinburghCastle/bild1.jpg" class="erstesBild slideshowBilder">
+        <div class="fade">
+            <img id="erstesBild" src="../images/edinburghCastle/bild1.jpg" class="erstesBild slideshowBilder">
+        </div>
+
+        <div class="bilder fade">
+            <img src="../images/edinburghCastle/bild1.jpg" class="erstesBild slideshowBilder">
+        </div>
+
+        <div class="bilder fade">
+            <img src="../images/edinburghCastle/bild2.jpg" class="nichtErstesBild slideshowBilder">
+        </div>
+
+        <div class="bilder fade">
+            <img src="../images/edinburghCastle/bild3.jpg" class="nichtErstesBild slideshowBilder">
+        </div>
+
+        <a class="vorheriges material-icons" onclick="naechstesBild(-1)">navigate_before</a>
+        <a class="naechstes material-icons" onclick="naechstesBild(1)">navigate_next</a>
     </div>
 
-    <div class="bilder fade">
-        <img src="../images/edinburghCastle/bild1.jpg" class="erstesBild slideshowBilder">
+    <br>
+
+    <div class="punkte">
+        <span class="punkt" onclick="zeigeBildZuGegebenemPunktIndex(1)"></span>
+        <span class="punkt" onclick="zeigeBildZuGegebenemPunktIndex(2)"></span>
+        <span class="punkt" onclick="zeigeBildZuGegebenemPunktIndex(3)"></span>
     </div>
-
-    <div class="bilder fade">
-        <img src="../images/edinburghCastle/bild2.jpg" class="nichtErstesBild slideshowBilder">
-    </div>
-
-    <div class="bilder fade">
-        <img src="../images/edinburghCastle/bild3.jpg" class="nichtErstesBild slideshowBilder">
-    </div>
-
-    <a class="vorheriges material-icons" onclick="naechstesBild(-1)">navigate_before</a>
-    <a class="naechstes material-icons" onclick="naechstesBild(1)">navigate_next</a>
-</div>
-
-<br>
-
-<div class="punkte">
-    <span class="punkt" onclick="aktuellesBild(1)"></span>
-    <span class="punkt" onclick="aktuellesBild(2)"></span>
-    <span class="punkt" onclick="aktuellesBild(3)"></span>
-</div>
 
 </div>
 
@@ -99,8 +100,8 @@
             <td class="zweiteSpalte">Es ist nicht eindeutig geklärt, wann das Edinburgh Castle gebaut wurde.
                 Allerdings ist der Platz einer der ältesten "befestigten" Orte der Welt.
                 Man geht davon aus, das die Burg bereits im 7. Jahrhundert erbaut wurde.
-                Aufgrund seiner strategisch günstigen Lage wurde oft versucht das Schloss einzunehmen, so wurde es
-                viele Male belagert. Während den Unabhängigkeitskriegen wurde auch einige Male der Besitzer gewechselt.
+                Aufgrund seiner strategisch günstigen Lage wurde oft versucht das Schloss einzunehmen. Während den
+                Unabhängigkeitskriegen wurde auch einige Male der Besitzer gewechselt.
                 Im Jahre 1314 gelang es zurück in die Hände der Schotten.
             </td>
         </tr>

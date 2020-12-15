@@ -5,7 +5,7 @@ function naechstesBild(n) {
     zeigeBild(slideIndex += n);
 }
 
-function aktuellesBild(n) {
+function zeigeBildZuGegebenemPunktIndex(n) {
     zeigeBild(slideIndex = n);
 }
 
