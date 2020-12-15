@@ -1,6 +1,6 @@
 const EdinburghLong = -3.188267;
 const EdinburghLat = 55.953251;
-const INFOTEXT = 'Sie können sowohl Punkte als auch Kommas benutzen. Buchstaben (außer e für hoch) ' +
+const INFOTEXT = 'Sie können sowohl Punkte als auch Kommas als trennzeichen benutzen. Buchstaben (außer e für hoch) ' +
     'können nicht eingegeben werden.';
 
 function showOSMKarte(place) {
