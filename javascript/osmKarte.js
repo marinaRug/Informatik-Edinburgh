@@ -1,5 +1,6 @@
 const EdinburghLong = -3.188267;
 const EdinburghLat = 55.953251;
+const INFOTEXT = '';
 
 function showOSMKarte(place) {
     let mapVariables = initializeMapVariables(place);
@@ -33,6 +34,10 @@ function punktAuswaehlen(nummer) {
         document.getElementById('longZwei').value = longitude;
         document.getElementById('latZwei').value = latitude;
     }
+}
+
+function berechnungInfo() {
+    alert(INFOTEXT);
 }
 
 function initializeMapVariables(ort) {

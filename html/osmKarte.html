@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <link href="../css/styles.css" rel="stylesheet">
-    <link href="../css/karte.css" rel="stylesheet">
+    <link href="../css/osmKarte.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="../images/logo.png">
     <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css"
           type="text/css">
@@ -63,7 +63,9 @@
 </div>
 
 <div class="formFuerBerechnung">
-    <h3 class="ueberschriftBerechnung">Entfernung zwischen zwei Punkten:</h3>
+    <h3 class="ueberschriftBerechnung">Entfernung zwischen zwei Punkten:
+    <button id="infoButton" onclick="berechnungInfo()"></button>
+    </h3>
     <form>
         <div class="berechnungItems">
             <input size="4" name="berechnen_button" class="berechnungButton" value="Punkt 1"
