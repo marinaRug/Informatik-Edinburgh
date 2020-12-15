@@ -4,13 +4,13 @@ function oeffneUnterseite(fileName) {
 
 function datumUndUhrzeitAnzeigen() {
     date = new Date();
-    jahr = date.getFullYear();
-    monat = date.getMonth() + 1;
-    tag = date.getDate();
+    let jahr = date.getFullYear();
+    let monat = date.getMonth() + 1;
+    let tag = date.getDate();
 
-    stunden = date.getHours();
-    minuten = date.getMinutes();
-    sekunden = date.getSeconds();
+    let stunden = date.getHours();
+    let minuten = date.getMinutes();
+    let sekunden = date.getSeconds();
     if (minuten < 10) {
         minuten = "0" + minuten;
     }
