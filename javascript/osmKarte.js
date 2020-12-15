@@ -1,6 +1,7 @@
 const EdinburghLong = -3.188267;
 const EdinburghLat = 55.953251;
-const INFOTEXT = '';
+const INFOTEXT = 'Sie können sowohl Punkte als auch Kommas benutzen. Buchstaben (außer e für hoch) ' +
+    'können nicht eingegeben werden.';
 
 function showOSMKarte(place) {
     let mapVariables = initializeMapVariables(place);
@@ -21,7 +22,6 @@ function showClickableOSMKarte() {
 }
 
 function punktAuswaehlen(nummer) {
-
 
     let longitude = parseFloat(document.getElementById('longitude').innerHTML);
     let latitude = parseFloat(document.getElementById('latitude').innerHTML);

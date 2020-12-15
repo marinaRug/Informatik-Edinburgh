@@ -38,13 +38,20 @@ function berechneStrecke() {
 
     //Hier werden die Punkte aus dem HTML geholt und in Radiant umgerechnet, da es sich bei Longitude und Latitude
     //um winkel handelt
-    let lon1 = parseFloat(document.getElementById('longEins').value) * RAD;
-    let lat1 = parseFloat(document.getElementById('latEins').value) * RAD;
-    let lon2 = parseFloat(document.getElementById('longZwei').value) * RAD;
-    let lat2 = parseFloat(document.getElementById('latZwei').value) * RAD;
+    //Damit der benutzer sowohl Kommas als auch Punkte eingeben kann werden Punkte durch Kommas ersetzt
+    let lon1 = parseFloat(document.getElementById('longEins').value.replace('.', ',')) * RAD;
+    let lat1 = parseFloat(document.getElementById('latEins').value.replace('.', ',')) * RAD;
+    let lon2 = parseFloat(document.getElementById('longZwei').value.replace('.', ',')) * RAD;
+    let lat2 = parseFloat(document.getElementById('latZwei').value.replace('.', ',')) * RAD;
 
     let strecke = Math.sin(lat1) * Math.sin(lat2) + Math.cos(Math.abs(lon1 - lon2)) * Math.cos(lat1) * Math.cos(lat2)
     strecke = (Math.atan(-strecke / Math.sqrt(-strecke * strecke + 1)) + PI2) * ERDRADIUS;
 
-    document.getElementById('strecke').innerHTML = 'Strecke: ' + strecke.toFixed(2) + ' km';
+    if(isNaN(strecke)){
+        strecke = 'Bitte kontrollieren Sie ihre Eingabe'
+    }
+    else {
+        strecke = 'Strecke: ' + strecke.toFixed(2) + ' km';
+    }
+    document.getElementById('strecke').innerHTML = strecke;
 }
