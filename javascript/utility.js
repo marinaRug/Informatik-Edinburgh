@@ -1,6 +1,6 @@
 const ERDRADIUS = 6378.88;
 const RAD = 0.01745329251994;
-const PI2 = 1.5707963267949; //Pi/2
+const PI2 = Math.PI/2; //Pi/2
 
 function oeffneUnterseite(fileName) {
     window.location.href = "../html/" + fileName + ".html";
