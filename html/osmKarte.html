@@ -6,6 +6,8 @@
     <link rel="icon" type="image/png" href="../images/logo.png">
     <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css"
           type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Piazzolla&display=swap"
           rel="stylesheet">
 
@@ -25,7 +27,7 @@
 <div class="navbar">
     <nav>
         <button class="homeButton" onclick="oeffneUnterseite('startseite')">
-            Startseite
+            <span class="material-icons">home</span>
         </button>
 
         <div class="dropdown">
@@ -56,15 +58,17 @@
     </script>
 
     <div class="coordinates">
-        <label>Longitude: </label><div id="longitude" class="longitude">-3.188267</div>
-        <label>Latitude: </label><div id="latitude" class="latitude">55.953251</div>
+        <label>Longitude: </label>
+        <div id="longitude" class="longitude">-3.188267</div>
+        <label>Latitude: </label>
+        <div id="latitude" class="latitude">55.953251</div>
     </div>
 
 </div>
 
 <div class="formFuerBerechnung">
     <h3 class="ueberschriftBerechnung">Entfernung zwischen zwei Punkten:
-    <button id="infoButton" onclick="berechnungInfo()"></button>
+        <button id="infoButton" onclick="berechnungInfo()"></button>
     </h3>
     <form>
         <div class="berechnungItems">
@@ -97,7 +101,7 @@
                        onclick="berechneStrecke()" type="button">
             </div>
         </div>
-    <div class="berechnungItems ergebnis" id="strecke">Strecke:</div>
+        <div class="berechnungItems ergebnis" id="strecke">Strecke:</div>
     </form>
 </div>
 <div class="darkBackground" style="text-align: center">

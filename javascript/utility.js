@@ -15,6 +15,9 @@ function datumUndUhrzeitAnzeigen() {
     let stunden = date.getHours();
     let minuten = date.getMinutes();
     let sekunden = date.getSeconds();
+    if (stunden < 10) {
+        stunden = "0" + stunden;
+    }
     if (minuten < 10) {
         minuten = "0" + minuten;
     }
