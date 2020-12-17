@@ -42,12 +42,17 @@ function berechneStrecke() {
     //Hier werden die Punkte aus dem HTML geholt und in Radiant umgerechnet, da es sich bei Longitude und Latitude
     //um winkel handelt
     //Damit der benutzer sowohl Kommas als auch Punkte eingeben kann werden Punkte durch Kommas ersetzt
-    let lon1 = parseFloat(document.getElementById('longEins').value.replace('.', ',')) * RAD;
-    let lat1 = parseFloat(document.getElementById('latEins').value.replace('.', ',')) * RAD;
-    let lon2 = parseFloat(document.getElementById('longZwei').value.replace('.', ',')) * RAD;
-    let lat2 = parseFloat(document.getElementById('latZwei').value.replace('.', ',')) * RAD;
+    let lon1 = parseFloat(document.getElementById('longEins').value);
+    let lat1 = parseFloat(document.getElementById('latEins').value);
+    let lon2 = parseFloat(document.getElementById('longZwei').value);
+    let lat2 = parseFloat(document.getElementById('latZwei').value);
 
-    let strecke = Math.sin(lat1) * Math.sin(lat2) + Math.cos(Math.abs(lon1 - lon2)) * Math.cos(lat1) * Math.cos(lat2)
+    let LonARad = lon1 * RAD
+    let LatARad = lat1 * RAD
+    let LonBRad = lon2 * RAD
+    let LatBRad = lat2 * RAD
+
+    let strecke = Math.sin(LatARad) * Math.sin(LatBRad) + Math.cos(Math.abs(LonARad - LonBRad)) * Math.cos(LatARad) * Math.cos(LatBRad)
     strecke = (Math.atan(-strecke / Math.sqrt(-strecke * strecke + 1)) + PI2) * ERDRADIUS;
 
     if(isNaN(strecke)){
