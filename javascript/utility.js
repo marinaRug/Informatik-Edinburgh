@@ -41,7 +41,6 @@ function berechneStrecke() {
 
     //Hier werden die Punkte aus dem HTML geholt und in Radiant umgerechnet, da es sich bei Longitude und Latitude
     //um winkel handelt
-    //Damit der benutzer sowohl Kommas als auch Punkte eingeben kann werden Punkte durch Kommas ersetzt
     let lon1 = parseFloat(document.getElementById('longEins').value);
     let lat1 = parseFloat(document.getElementById('latEins').value);
     let lon2 = parseFloat(document.getElementById('longZwei').value);

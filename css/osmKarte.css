@@ -76,3 +76,7 @@
     background-color: #105E31;
     cursor: pointer;
 }
+
+.textZentrieren{
+    text-align: center;
+}

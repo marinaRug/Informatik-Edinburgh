@@ -9,6 +9,9 @@ function showOSMKarte(place) {
 }
 
 function showClickableOSMKarte() {
+
+    //Hier wird mit dem Laden der OSM Karte gewartet bis der Rest der Website geladen ist, um zu verhindern,
+    //dass auf HTML Elemente zugegriffen wird, bevor diese existieren.
     window.onload = () => {
 
         let mapVariables = {
@@ -95,7 +98,7 @@ function createMap(mapVariables, target) {
 
 function createClickEventOnOSMMap(map) {
 
-    //Hier wird das Klickevent auf der Karte erstell, damit können Longitude und Latitude auf der Seite angezeigt werden
+    //Hier wird das Klickevent auf der Karte erstellt, damit können Longitude und Latitude auf der Seite angezeigt werden
 
     map.on('click', evt => {
         let coordinates = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326').toString();
